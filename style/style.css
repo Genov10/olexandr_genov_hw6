@@ -1,30 +1,31 @@
 /* RESET */
+/* обнуление браузера */
 *,
 *::after, 
 *::before {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+    box-sizing: border-box; 
 }
 
 html {
-    font-size: 16px;
+    font-size: 16px;  /* добавить rem */
 }
 
+/* MAIN STYLES */
 body {
     margin: 0;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: rgb(26, 26, 34);
-    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* шрифт */
+    background: rgb(26, 26, 34); /* фон сайта */
+    font-size: 1rem;  /* стандартный размер шрифта */
 }
 
 .wrapper {
-    min-height: 100%;
-    overflow: hidden;
+    overflow: hidden; /* что бы не добавлялся горизонтальный скрол */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* выставить блоки в колонку */
 }
 
 ul {
@@ -36,88 +37,12 @@ li {
    }
 
 a {
-    text-decoration: none;
-    color: rgb(236, 28, 36);
+    text-decoration: none; /* убрать подчеркивание */
+    color: rgb(236, 28, 36); /* цвет текста */
 }
 
 a:hover {
-    text-decoration: underline;
-}
-/* ROKET */
-/* 10 */.fixed__link {
-    position: fixed;
-    display: block;
-    top: 90%;
-    right: 0;
-    text-align: right;
-}
-
-/* 10 */.fixed__img {
-    width: 25%;
-    padding-right: 10%;
-}
-/* HEADER */
-/* 10 */.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-bottom: 3px solid rgb(0, 168, 243);
-}
-
-/* 10 */.header__logo {
-    text-align: center;
-    padding-top: 3%;
-}
-
-/* 10 */.menu__list {
-    display: flex;
-    flex-direction: row;
-    margin: 0% 20% 0% 20%;
-}
-
-/* 10 */.menu__item {
-    padding: 5% 5% 5% 20%;
-}
-
-/* MAIN */
-
-/* 1 */h2{
-    text-align: center;
-    color: rgb(0, 168, 243);
-}
-
-/* 10 */.main__text,
-.main__about {
-    border-top: 2px solid rgb(236, 28, 36);
-    border-right: 2px solid rgb(236, 28, 36);
-    border-radius: 0 15px;
-    width: 20%;
-    display: inline-block;
-    margin: 2%;
-    position: absolute;
-    top: 35%;
-}
-
-/* 10 */.about {
-    width: 80%;
-    left: 10%;
-}
-
-/* 10 */.left {
-    left: 10%;
-}
-/* 10 */.center {
-    left: 40%;
-}
-/* 10 */.right {
-    left: 70%;
-}
-
-/* 10 */.main__picture,
-.main__img {
-    width: 100%;
-    border-radius: 0 10px;
-    border: 2px solid rgb(236, 28, 36);
+    text-decoration: underline; /* при наведении добавляется подчеркивание */
 }
 
 /* 1 */p {
@@ -125,6 +50,90 @@ a:hover {
     padding-top: 6%;
 }
 
-/* 10 */.main__add {
+/* ROKET */
+
+/* 10 фиксирую стрелку в правом нижнем углу*/.fixed__link {
+    position: fixed;
+    display: block;
+    top: 90%;
+    right: 0;
+    text-align: right;
+}
+
+/* 10 размер стрелки*/.fixed__img {
+    width: 25%;
+    padding-right: 10%;
+}
+
+/* HEADER */
+
+/* 10 */.header {
+    display: flex;
+    flex-direction: column; /* выставить меню под логотипом */
+    justify-content: space-around; /* расположеение */
+    border-bottom: 3px solid rgb(0, 168, 243); /* нижняя граница */
+}
+
+/* 10 */.header__logo {
+    text-align: center; /* центрировал логотип */
+    padding-top: 3%; /* отступ от вехней границы бразера */
+}
+
+/* 10 */.menu__list {
+    display: flex;
+    flex-direction: row; /* выставил пункты меню горизрнтально */
+    margin: 0% 20% 0% 20%;
+}
+
+/* 10 */.menu__item {
+    padding: 5% 5% 5% 20%; /* отсупы пунктов меню */
+}
+
+/* MAIN */
+
+/* 1 */h2{
+    text-align: center; /* выставить по-центру */
+    color: rgb(0, 168, 243); /* цвет текста */
+}
+
+/* 10 */.main__text,
+.main__about {
+    border-top: 2px solid rgb(236, 28, 36); /* коректирую дизайн */
+    border-right: 2px solid rgb(236, 28, 36); /* коректирую дизайн */
+    border-radius: 0 15px; /* коректирую дизайн */
+    width: 20%; /* ширина блоков */
+    display: inline-block; /* выставить блоки горизонтально */
+    margin: 2%; /* растояние между блоками */
+    position: absolute; /* позиционирую относительно родителя, что бы блоки были в одну линиию  */
+    top: 35%; /* отступ от верха блока родителя */
+}
+
+/* 10 для дополнительного класса */.about {
+    width: 80%; 
+    left: 10%; /* отступ от левой границы */
+}
+
+/* для дополнительных классов туров добавляю отступы от левой границы */
+/* 10 */
+.left {
+    left: 10%;
+}
+
+/* 10 */.center {
+    left: 40%;
+}
+
+/* 10 */.right {
+    left: 70%;
+}
+
+/* 10 коректирую дизайн */.main__picture,
+.main__img {
+    width: 100%;
+    border-radius: 0 10px;
+    border: 2px solid rgb(236, 28, 36);
+}
+
+/* 10 размер доп. страницы*/.main__add {
     font-size: 1.25rem;
 }
